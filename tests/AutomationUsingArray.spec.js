@@ -10,9 +10,6 @@ test('Google Search and Page Title Test', async ({ page }) => {
   await page.getByLabel('Search', { exact: true }).fill(textArray[0]);
   await page.keyboard.press('Enter');
 
-  // Verify that the same text has been searched
-  await page.pause();
-
   // Wait for the search results to load (adjust the selector as needed)
   await page.waitForSelector('.g');
 
